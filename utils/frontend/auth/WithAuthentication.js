@@ -1,5 +1,5 @@
 import AuthContext from "./AuthContext";
-import LoadingPage from "../../../components/layout/LoadingPage";
+import LoadingPage from "../../../components/Layout/LoadingPage";
 
 function WithAuthentication(Component) {
   return (props) => (
