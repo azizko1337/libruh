@@ -7,7 +7,7 @@ const useStudent = () => {
       try {
         let res = await fetch(`/api/v1/profile`, {
           cors: "cors",
-          credentials: "include",
+          credentials: "same-origin",
         });
         res = await res.json();
         if (res.error === false) {
