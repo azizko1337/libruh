@@ -1,5 +1,3 @@
-import config from "../../next.config";
-
 const getUser = async (req) => {
   try {
     const { jwt } = req.cookies;
@@ -10,13 +8,12 @@ const getUser = async (req) => {
       },
       body: JSON.stringify({
         jwt,
-        appToken: config.APP_KEY,
+        appToken: process.env.APP_KEY,
       }),
     });
     res = await res.json();
     return res.user;
   } catch (error) {
-    console.log(error);
     return null;
   }
 };
