@@ -53,21 +53,21 @@ const Timetable = (props) => {
     <DayList>
       <Day
         name={getDayName(today)}
-        hours={timetable.hours}
-        lessons={timetable.table[getDayName(today)]}
-        events={calendar[today.getDate()]}
+        hours={timetable.hours || []}
+        lessons={timetable.table[getDayName(today)] || []}
+        events={calendar[today.getDate()] || []}
       />
       <Day
         name={getDayName(tommorow)}
-        hours={timetable.hours}
-        lessons={timetable.table[getDayName(tommorow)]}
-        events={calendar[tommorow.getDate()]}
+        hours={timetable.hours || []}
+        lessons={timetable.table[getDayName(tommorow)] || []}
+        events={calendar[tommorow.getDate()] || []}
       />
       <Day
         name={getDayName(dayAfterTommorow)}
-        hours={timetable.hours}
-        lessons={timetable.table[getDayName(dayAfterTommorow)]}
-        events={calendar[dayAfterTommorow.getDate()]}
+        hours={timetable.hours || []}
+        lessons={timetable.table[getDayName(dayAfterTommorow)] || []}
+        events={calendar[dayAfterTommorow.getDate()] || []}
       />
     </DayList>
   );
