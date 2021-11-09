@@ -1,19 +1,13 @@
-import styled from "styled-components";
-
-const GradeBox = styled.li`
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => theme.color.secondary};
-  background-color: ${({ theme }) => theme.color.accent};
-`;
+import GradeBox from "./GradeBox";
 
 const Grade = (props) => {
-  const { id, value } = props;
+  const { id, value, onClick } = props;
 
-  return <GradeBox id={id}>{value}</GradeBox>;
+  return (
+    <GradeBox onClick={onClick} id={id}>
+      {value}
+    </GradeBox>
+  );
 };
 
 export default Grade;

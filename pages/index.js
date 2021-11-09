@@ -27,7 +27,7 @@ const Index = (props) => {
         To use Libruh log in to the website antonizalupka.tk. Then come back
         here.
       </Paragraph>
-      <Link href={`${process.env.AUTH_SERVER}`} passHref>
+      <Link href={`${process.env.AUTH_SERVER}/?callback=${process.env.THIS}`} passHref>
         <LinkButton>CREATE ACCOUNT OR LOGIN</LinkButton>
       </Link>
     </>

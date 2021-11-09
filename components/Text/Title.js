@@ -5,6 +5,8 @@ const Title = styled.h1`
   font-size: ${({ theme }) => theme.size.XXL};
   letter-spacing: 2px;
   font-weight: 900;
+  text-transform: capitalize;
+  text-align: center;
 `;
 
 export default Title;

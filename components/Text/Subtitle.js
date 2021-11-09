@@ -4,6 +4,7 @@ const Subtitle = styled.h2`
   color: ${({ theme }) => theme.color.accent};
   font-size: ${({ theme }) => theme.size.XL};
   font-weight: 700;
+  text-transform: capitalize;
 `;
 
 export default Subtitle;
